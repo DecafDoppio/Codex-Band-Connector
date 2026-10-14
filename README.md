@@ -22,7 +22,7 @@
 
 ![界面展示](media/preview.png)
 
-展示看板版，含演示内容与合成场景；素材来源见 [MEDIA_SOURCES.md](MEDIA_SOURCES.md)。
+展示看板，含演示内容与合成场景；素材来源见 [MEDIA_SOURCES.md](MEDIA_SOURCES.md)。
 
 ## 从源码构建
 
