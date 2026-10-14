@@ -10,7 +10,7 @@
 
 [下载 1.3.1](https://github.com/DecafDoppio/Codex-Band-Connector/releases/tag/v1.3.1) · [全部 Releases](https://github.com/DecafDoppio/Codex-Band-Connector/releases)
 
-##适配情况
+## 适配情况
 初版1.3.1仅开放适配小米手环11及11NFC，开发者给自己加了鸡腿腿腿儿，这两周会陆续上线适配其他手环/手表型号的更新。
 
 ## 使用方法
