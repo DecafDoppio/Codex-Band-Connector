@@ -18,12 +18,13 @@ python scripts/prepare-publication.py
 
 脚本生成 .publication/astrobox，作为未来 astrobox-release 分支的独立文件树；不把它提交到 main。操作前记录 main 的源码提交与 Release 对应关系。使用单独 checkout/worktree 提交该目录内容，避免覆盖源码工作目录。
 
-快应用分支根目录包含 manifest_v2.json、media 和 downloads。设备 xmb11 和 xmb11nfc，版本 1.3.1；普通版有已记录真机验收，NFC 支持由维护者确认；作者 DecafDoppio 绑定 AstroBox。官方资源索引需要 repo_owner=DecafDoppio、repo_name=Codex-Band-Connector 和发布分支的实际提交 SHA；标签建议 Codex;AI;开发工具。官方源通过提交 SHA 定位内容。CreatorConsole 自动创建仓库的流程与现有两库不同，提交时检查生成目标，勿自动创建重复仓库。
+快应用分支根目录包含 manifest_v2.json、media 和 downloads。设备 xmb11 和 xmb11nfc，版本 1.3.1；普通版有已记录真机验收，NFC 支持由维护者确认；作者 DecafDoppio 绑定 AstroBox。当前申请在官方资源库 PR 中新增 tmp/decafdoppio/codex-band-connector/resource.csv 与 request.json（schema_version=1，mode=create），不直接修改 index_v2.csv。resource.csv 含表头和本资源一行，引用发布分支实际提交 SHA；官方工作流在审核合并后应用索引。标签建议 Codex;AI;开发工具。手动 API 提交不伪造 CreatorConsole 客户端版本。CreatorConsole 自动创建仓库的流程与现有两库不同，提交时检查生成目标，勿自动创建重复仓库。
 
-独立发布分支尚未创建，也未提交官方审核。本说明不自动推送或上架。
+发布分支已创建，快应用审核申请见 https://github.com/AstralSightStudios/AstroBox-Repo/pull/1358 。是否上线以官方审核及工作流结果为准。
 
 官方资料：
 - https://abox.run/docs/creator-tools/resource-management/plugin-upload
 - https://abox.run/docs/creator-tools/resource-management/free-resources
 - https://github.com/AstralSightStudios/AstroBox-Repo/blob/main/assets/docs/ResAdptV2.md
+
 
