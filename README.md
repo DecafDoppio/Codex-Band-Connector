@@ -2,7 +2,7 @@
 
 在小米手环 11 查看 Codex 授权请求，与电脑同步批准或拒绝。问题回答仍在电脑完成。
 
-当前版本 **1.3.1 / 13001**。维护者 **DecafDoppio** 已确认真机验收成功。手环主页继续显示 Codex Connector。
+当前版本 **1.3.1 / 13001**，更新日期2026年10月15日。
 
 ![封面](media/cover.png)
 
@@ -10,7 +10,11 @@
 
 [下载 1.3.1](https://github.com/DecafDoppio/Codex-Band-Connector/releases/tag/v1.3.1) · [全部 Releases](https://github.com/DecafDoppio/Codex-Band-Connector/releases)
 
-下载 Release 中的 RPK，通过 AstroBox 安装到小米手环 11。仅声明已验证的普通手环 11（xmb11），固件 4.100.139；保持应用前台运行。问题在手环展示，回答在电脑完成。
+##适配情况
+初版1.3.1仅开放适配小米手环11及11NFC，开发者给自己加了鸡腿腿腿儿，这两周会陆续上线适配其他手环/手表型号的更新。
+
+## 使用方法
+下载 Release 中的 RPK，通过 AstroBox 安装到小米手环 11。真机已验证：手环 11（xmb11），固件 4.100.139；保持应用前台运行。问题在手环展示，回答在电脑完成。
 
 配套项目：[Codex Band Bridge](https://github.com/DecafDoppio/Codex-Band-Bridge)。两侧均使用 1.3.1，不新增强制捆绑安装。
 
@@ -18,7 +22,7 @@
 
 ![界面展示](media/preview.png)
 
-图片为维护者提供的展示排版，含演示内容与合成场景；素材来源见 [MEDIA_SOURCES.md](MEDIA_SOURCES.md)。
+展示看板版，含演示内容与合成场景；素材来源见 [MEDIA_SOURCES.md](MEDIA_SOURCES.md)。
 
 ## 从源码构建
 
