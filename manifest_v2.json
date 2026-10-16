@@ -5,12 +5,10 @@
     "name": "Codex Band Connector",
     "description": "配合 Codex Band Bridge，在小米手环 11 查看并处理 Codex 授权请求；问题回答仍在电脑完成。",
     "preview": [
-      "media/06-approval-and-question-with-device.png",
-      "media/02-single-detail-with-device.png",
-      "media/05-question-detail-with-device.png"
+      "media/exec-7254781a-a5b4-4296-99bb-fc44ddd6c107.png"
     ],
     "icon": "media/icon.png",
-    "cover": "media/cover-b-light-under-1mb.jpg",
+    "cover": "media/cover-a-dark-under-1mb.jpg",
     "author": [
       {
         "name": "DecafDoppio",
