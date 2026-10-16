@@ -2,7 +2,7 @@
 
 在小米手环 11 查看 Codex 授权请求，与电脑同步批准或拒绝。问题回答仍在电脑完成。
 
-当前版本 **1.3.1 / 13001**，更新日期2026年10月15日。
+当前版本 **1.3.1 / 13001**，更新日期2026年10月16日。已更新标准 release 打包与资源页素材，等待平台重新审核。
 
 ![封面](media/cover.png)
 
@@ -20,9 +20,24 @@
 
 ## 界面展示
 
-![界面展示](media/preview.png)
+以下为 AIoT 模拟器中实际运行的界面，包含模拟器设备外壳。授权与问题内容为截图测试样例，问题仍在电脑端回答。
 
-展示看板，含演示内容与合成场景；素材来源见 [MEDIA_SOURCES.md](MEDIA_SOURCES.md)。
+<table>
+  <tr><th>单条授权</th><th>授权详情</th><th>多条授权</th></tr>
+  <tr>
+    <td><img src="media/screenshots/01-single-list-with-device.png" alt="单条授权列表" width="200"></td>
+    <td><img src="media/screenshots/02-single-detail-with-device.png" alt="授权详情，可批准或拒绝" width="200"></td>
+    <td><img src="media/screenshots/03-multiple-list-with-device.png" alt="多条授权并列显示" width="200"></td>
+  </tr>
+  <tr><th>有个问题</th><th>问题详情</th><th>授权与问题并列</th></tr>
+  <tr>
+    <td><img src="media/screenshots/04-question-list-with-device.png" alt="问题列表" width="200"></td>
+    <td><img src="media/screenshots/05-question-detail-with-device.png" alt="Codex 有个问题，正文可上下滚动" width="200"></td>
+    <td><img src="media/screenshots/06-approval-and-question-with-device.png" alt="授权与问题同时出现在列表中" width="200"></td>
+  </tr>
+</table>
+
+截图来自 1.3.1 独立测试副本，保留正式界面与业务逻辑，仅适配模拟器通信；不作为真机互联验收。素材来源见 [MEDIA_SOURCES.md](MEDIA_SOURCES.md)。
 
 ## 从源码构建
 
@@ -41,13 +56,13 @@ $env:CODEX_BAND_SIGN_CERT = '外部正式证书绝对路径'
 npm run release
 ```
 
-输出 dist/codex-band-1.3.1-source.rpk；dist、build、node_modules 均不提交。构建不读取历史 RPK。src/manifest.json 保留还原基线的内部元数据，release.json 指定发布版本 1.3.1/13001；不要手动统一这些内部字段。
+输出 dist/com.local.codexband.release.1.3.1.rpk；dist、build、node_modules 均不提交。构建通过标准 `aiot release` 直接生成正式签名包，不读取历史 RPK，也不在编译后改写包体。src/manifest.json 与 release.json 的发布名称、版本 1.3.1/13001 保持一致；quickapp.config.js 使用官方签名回调读取外部证书与私钥，并校验既有签名身份。
 
 这是可独立编译的还原 UX/JS 源码，不冒称找回原始手写源码。官方同身份签名需要维护者持有的私钥；普通用户可构建调试包。
 
 ## 发布、验证与反馈
 
-main 保存源码及构建输入；安装包放 GitHub Releases，AstroBox 所需文件使用独立发布分支，见 [PUBLISHING.md](PUBLISHING.md)。首次推送前下载链接尚未生效。
+main 保存源码及构建输入；安装包放 GitHub Releases，AstroBox 所需文件使用独立发布分支，见 [PUBLISHING.md](PUBLISHING.md)。本次审核修正的验证范围见 [REVIEW_FIX_2026-10-16.md](REVIEW_FIX_2026-10-16.md)。
 
 检查结果及限制见 [VALIDATION.md](VALIDATION.md)。通过 [Issues](https://github.com/DecafDoppio/Codex-Band-Connector/issues) 反馈。自有代码采用 [MIT](LICENSE)，第三方许可证与通知保留，见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 

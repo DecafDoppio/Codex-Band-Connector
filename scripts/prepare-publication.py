@@ -14,13 +14,15 @@ def sha(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--rpk', type=Path, help='External accepted RPK, for Connector only')
+    parser.add_argument('--output-dir', type=Path, help='Separate local export directory; existing exports are preserved')
     args = parser.parse_args()
     watch = (ROOT / 'release.json').exists()
     version = (json.loads((ROOT / 'release.json').read_text(encoding='utf-8-sig'))['versionName'] if watch else (ROOT / 'VERSION').read_text().strip())
     if version != '1.3.1':
         raise RuntimeError('Review publication identity before exporting another version.')
-    github = ROOT / '.publication/github-release'
-    astrobox = ROOT / '.publication/astrobox'
+    output = args.output_dir or ROOT / '.publication'
+    github = output / 'github-release'
+    astrobox = output / 'astrobox'
     # Refuse to mix previous generations; remove/rename the local export deliberately before retrying.
     if github.exists() or astrobox.exists():
         raise RuntimeError('Export exists. Preserve or remove .publication before generating a new export.')
@@ -28,11 +30,19 @@ def main():
         artifact = args.rpk or ROOT / 'downloads/Codex-Band-Connector-1.3.1.rpk'
         expected = json.loads((ROOT / 'RELEASE_STATUS.json').read_text(encoding='utf-8-sig'))['artifactSha256']
         if sha(artifact) != expected:
-            raise RuntimeError('RPK differs from the recorded accepted candidate.')
+            # A fresh standard-release candidate is explicitly selected with --rpk.
+            # This permits export, not a claim of hardware acceptance.
+            report_path = ROOT / 'dist/source-build.json'
+            report = json.loads(report_path.read_text(encoding='utf-8')) if report_path.exists() else {}
+            if not args.rpk or report.get('standardRelease') is not True or sha(artifact) != report.get('sha256'):
+                raise RuntimeError('RPK differs from the accepted candidate and current verified standard release.')
         with zipfile.ZipFile(artifact) as archive:
             manifest = json.loads(archive.read('manifest.json'))
+            device_manifest = json.loads(archive.read('manifest-watch.json'))
         if manifest['versionName'] != version or manifest['versionCode'] != 13001 or manifest['name'] != 'Codex Band Connector':
             raise RuntimeError('RPK release metadata differs.')
+        if any(device_manifest[key] != manifest[key] for key in ('versionName', 'versionCode', 'name')):
+            raise RuntimeError('Device-specific release metadata differs.')
         github.mkdir(parents=True)
         target = github / ('Codex-Band-Connector-' + version + '.rpk')
         shutil.copy2(artifact, target)
