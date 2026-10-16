@@ -1,6 +1,8 @@
 # Codex Band Connector — AstroBox distribution 1.3.1
 
-配合 Codex Band Bridge，在小米手环 11 查看并处理 Codex 授权请求；问题在电脑端回答。
+抬腕查看，轻点授权。配合 Codex Band Bridge，在小米手环 11 查看授权请求、同步批准或拒绝，并显示多条请求队列；问题回答仍在电脑完成。
+
+![Codex Band Connector：抬腕查看，轻点授权](media/cover.jpg)
 
 源码与构建说明：https://github.com/DecafDoppio/Codex-Band-Connector/tree/main
 
