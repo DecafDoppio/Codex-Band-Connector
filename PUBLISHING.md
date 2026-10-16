@@ -2,7 +2,7 @@
 
 ## 2026-10-16 审核第 1、4 项修正候选
 
-资源页头像已换用同设计 1024×1024 原图；手环内图标不变。发布构建改为标准 `aiot release`，不再编译 debug 包后手动改写清单及重签。版本仍为 1.3.1 / 13001，沿用原签名身份。
+资源图标最终使用同设计 256×256 版本以满足 CreatorConsole 尺寸限制；头图采用维护者选定的 B 版浅色 3:2 封面，手环内图标不变。发布构建改为标准 `aiot release`，不再编译 debug 包后手动改写清单及重签。版本仍为 1.3.1 / 13001，沿用原签名身份。
 
 第 1、4 项的初次独立导出位于 `.publication/review-fix-2026-10-16/`；补齐第 2 项模拟器截图后的完整导出位于 `.publication/github-sync-2026-10-16/`。其中 `astrobox/` 可供后续 CreatorConsole 手动提交，`github-release/` 含 RPK 与 SHA256SUMS.txt。旧 `.publication/` 和 downloads 中的旧包均保留。第 3 项 CreatorConsole 提交仍由用户手动完成，不在本次 GitHub 同步中自动提交。
 

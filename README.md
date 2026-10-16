@@ -1,10 +1,10 @@
 # Codex Band Connector
 
-在小米手环 11 查看 Codex 授权请求，与电脑同步批准或拒绝。问题回答仍在电脑完成。
+抬腕查看，轻点授权。配合 Codex Band Bridge，在小米手环 11 查看授权请求、同步批准或拒绝，并显示多条请求队列；问题回答仍在电脑完成。
 
 当前版本 **1.3.1 / 13001**，更新日期2026年10月16日。已更新标准 release 打包与资源页素材，等待平台重新审核。
 
-![封面](media/cover.png)
+![Codex Band Connector：抬腕查看，轻点授权](media/cover.jpg)
 
 ## 下载与安装
 
