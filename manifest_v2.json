@@ -1,0 +1,46 @@
+{
+  "item": {
+    "id": "com.local.codexband",
+    "restype": "quick_app",
+    "name": "Codex Band Connector",
+    "description": "配合 Codex Band Bridge，在小米手环 11 查看并处理 Codex 授权请求；问题回答仍在电脑完成。",
+    "preview": [
+      "media/06-approval-and-question-with-device.png",
+      "media/02-single-detail-with-device.png",
+      "media/05-question-detail-with-device.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover-b-light-under-1mb.jpg",
+    "author": [
+      {
+        "name": "DecafDoppio",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "开源代码",
+      "url": "https://github.com/DecafDoppio/Codex-Band-Connector",
+      "icon": "github-logo"
+    },
+    {
+      "title": "配套电脑插件",
+      "url": "https://github.com/DecafDoppio/Codex-Band-Bridge",
+      "icon": "github-logo"
+    }
+  ],
+  "downloads": {
+    "xmb11": {
+      "version": "1.3.1",
+      "file_name": "downloads/com.local.codexband.release.1.3.1.rpk",
+      "versionCode": 13001
+    },
+    "xmb11nfc": {
+      "version": "1.3.1",
+      "file_name": "downloads/com.local.codexband.release.1.3.1.rpk",
+      "versionCode": 13001
+    }
+  },
+  "ext": {}
+}
