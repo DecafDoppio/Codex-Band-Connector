@@ -30,4 +30,3 @@ GitHub Release：https://github.com/DecafDoppio/Codex-Band-Connector/releases/ta
 </table>
 
 截图来自 1.3.1 独立测试副本，保留正式界面与业务逻辑，仅适配模拟器通信；不作为真机互联验收。素材来源见 [素材来源](https://github.com/DecafDoppio/Codex-Band-Connector/blob/main/MEDIA_SOURCES.md)。
-
