@@ -3,12 +3,13 @@
     "id": "com.local.codexband",
     "restype": "quick_app",
     "name": "Codex Band Connector",
-    "description": "配合 Codex Band Bridge，在小米手环 11 查看并处理 Codex 授权请求；问题回答仍在电脑完成。",
+    "description": "配合 Codex Band Bridge，在小米手环上查看并处理 Codex 授权请求；问题回答仍在电脑完成。",
     "preview": [
-      "media/exec-7254781a-a5b4-4296-99bb-fc44ddd6c107.png"
+      "media/智能手环界面宣传海报.png",
+      "media/效率随身，智能触达.png"
     ],
     "icon": "media/icon.png",
-    "cover": "media/cover-a-dark-under-1mb.jpg",
+    "cover": "media/屏幕截图 2026-10-21 031919.jpg",
     "author": [
       {
         "name": "DecafDoppio",
@@ -40,5 +41,14 @@
       "versionCode": 13001
     }
   },
-  "ext": {}
+  "ext": {
+    "bundledResources": {
+      "required": [
+        {
+          "type": "plugin",
+          "id": "Codex Band Bridge"
+        }
+      ]
+    }
+  }
 }
