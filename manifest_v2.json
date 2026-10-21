@@ -5,11 +5,11 @@
     "name": "Codex Band Connector",
     "description": "抬腕查看，轻点授权。配合 Codex Band Bridge，在小米手环 11 查看并处理 Codex 授权请求并批准或拒绝，支持多条请求队列。可查看 Codex 提出的问题，问题回答仍在电脑端完成。",
     "preview": [
-      "media/效率随身，智能触达.png",
-      "media/智能手环界面宣传海报.png"
+      "media/效率随身，智能触达.jpg",
+      "media/智能手环界面宣传海报.jpg"
     ],
     "icon": "media/icon.png",
-    "cover": "media/屏幕截图 2026-10-21 031919.jpg",
+    "cover": "media/二比三头图.jpg",
     "author": [
       {
         "name": "DecafDoppio",
