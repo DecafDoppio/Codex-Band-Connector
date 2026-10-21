@@ -1,20 +1,20 @@
 # Codex Band Connector
 
-抬腕查看，轻点授权。配合 Codex Band Bridge，在小米手环 11 查看授权请求、同步批准或拒绝，并显示多条请求队列；问题回答仍在电脑完成。
+抬腕查看，轻点授权。配合 Codex Band Bridge，在小米手环 10、10 NFC、11 及 11 NFC 上查看授权请求、同步批准或拒绝，并显示多条请求队列；问题回答仍在电脑完成。
 
-当前版本 **1.3.1 / 13001**，更新日期2026年10月16日。已更新标准 release 打包与资源页素材，等待平台重新审核。
+当前版本 **1.3.1 / 13001**，更新日期2026年10月21日。已更新标准 release 打包与资源页素材，等待平台重新审核。
 
-![Codex Band Connector：抬腕查看，轻点授权](media/cover.jpg)
+![Codex Band Connector：抬腕查看，轻点授权](media/cover.png)
 
 ## 下载与安装
 
 [下载 1.3.1](https://github.com/DecafDoppio/Codex-Band-Connector/releases/tag/v1.3.1) · [全部 Releases](https://github.com/DecafDoppio/Codex-Band-Connector/releases)
 
 ## 适配情况
-初版1.3.1仅开放适配小米手环11及11NFC，开发者给自己加了鸡腿腿腿儿，这两周会陆续上线适配其他手环/手表型号的更新。
+当前适配小米手环 10、10 NFC、11 及 11 NFC。
 
 ## 使用方法
-下载 Release 中的 RPK，通过 AstroBox 安装到小米手环 11。真机已验证：手环 11（xmb11），固件 4.100.139；保持应用前台运行。问题在手环展示，回答在电脑完成。
+下载 Release 中的 RPK，通过 AstroBox 安装到小米手环 10、10 NFC、11 及 11 NFC。真机已验证：手环 11（xmb11），固件 4.100.139；保持应用前台运行。问题在手环展示，回答在电脑完成。
 
 配套项目：[Codex Band Bridge](https://github.com/DecafDoppio/Codex-Band-Bridge)。两侧均使用 1.3.1，不新增强制捆绑安装。
 
@@ -38,6 +38,14 @@
 </table>
 
 截图来自 1.3.1 独立测试副本，保留正式界面与业务逻辑，仅适配模拟器通信；不作为真机互联验收。素材来源见 [MEDIA_SOURCES.md](MEDIA_SOURCES.md)。
+
+## 艺术化展示
+
+以下两张为维护者提供的艺术化宣传图，界面与设备经过艺术化呈现；实际运行界面见上方六张模拟器截图。问题回答仍在电脑端完成。
+
+<table>
+  <tr><td><img src="media/promo-efficiency.png" alt="把效率，戴在手上" width="420"></td><td><img src="media/promo-interface.png" alt="稳稳当当，尽在掌握" width="420"></td></tr>
+</table>
 
 ## 从源码构建
 

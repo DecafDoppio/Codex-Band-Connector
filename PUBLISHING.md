@@ -1,5 +1,13 @@
 # GitHub 与 AstroBox 发布
 
+## 2026-10-21 展示与适配声明
+
+- 当前适配小米手环 10、10 NFC、11 及 11 NFC，发布清单增加 xmb10、xmb10nfc，与原有 11 系列共用同一 1.3.1 RPK。
+- 使用维护者指定的新头图，保留六张模拟器界面图，另增加两张艺术化宣传图。
+- 默认下载包使用 dist 中的标准 release 包，不重新构建；版本仍为 1.3.1 / 13001。
+
+头图引用 media/cover.png，预览列表保留六张原始模拟器截图并追加 media/promo-efficiency.png、media/promo-interface.png。旧封面记录如下，当前配置以上述文件为准。
+
 ## 2026-10-16 审核第 1、4 项修正候选
 
 资源图标最终使用同设计 256×256 版本以满足 CreatorConsole 尺寸限制；头图采用维护者选定的 B 版浅色 3:2 封面，手环内图标不变。发布构建改为标准 `aiot release`，不再编译 debug 包后手动改写清单及重签。版本仍为 1.3.1 / 13001，沿用原签名身份。
@@ -33,7 +41,7 @@ python scripts/prepare-publication.py
 
 脚本生成 .publication/astrobox，作为未来 astrobox-release 分支的独立文件树；不把它提交到 main。操作前记录 main 的源码提交与 Release 对应关系。使用单独 checkout/worktree 提交该目录内容，避免覆盖源码工作目录。
 
-快应用分支根目录包含 manifest_v2.json、media 和 downloads。设备 xmb11 和 xmb11nfc，版本 1.3.1；普通版有已记录真机验收，NFC 支持由维护者确认；作者 DecafDoppio 绑定 AstroBox。当前申请在官方资源库 PR 中新增 tmp/decafdoppio/codex-band-connector/resource.csv 与 request.json（schema_version=1，mode=create），不直接修改 index_v2.csv。resource.csv 含表头和本资源一行，引用发布分支实际提交 SHA；官方工作流在审核合并后应用索引。标签建议 Codex;AI;开发工具。手动 API 提交不伪造 CreatorConsole 客户端版本。CreatorConsole 自动创建仓库的流程与现有两库不同，提交时检查生成目标，勿自动创建重复仓库。
+快应用分支根目录包含 manifest_v2.json、media 和 downloads。设备 xmb10、xmb10nfc、xmb11 和 xmb11nfc（小米手环 10、10 NFC、11 及 11 NFC），版本 1.3.1；既有真机验收记录为普通手环 11，固件 4.100.139；作者 DecafDoppio 绑定 AstroBox。当前申请在官方资源库 PR 中新增 tmp/decafdoppio/codex-band-connector/resource.csv 与 request.json（schema_version=1，mode=create），不直接修改 index_v2.csv。resource.csv 含表头和本资源一行，引用发布分支实际提交 SHA；官方工作流在审核合并后应用索引。标签建议 Codex;AI;开发工具。手动 API 提交不伪造 CreatorConsole 客户端版本。CreatorConsole 自动创建仓库的流程与现有两库不同，提交时检查生成目标，勿自动创建重复仓库。
 
 发布分支已创建，快应用审核申请见 https://github.com/AstralSightStudios/AstroBox-Repo/pull/1358 。是否上线以官方审核及工作流结果为准。
 
